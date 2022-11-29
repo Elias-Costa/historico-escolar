@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Histórico Escolar</title>
+		<link rel="stylesheet" type="text/css" href="tarefa2.css">
+	</head>
+	<body>
+		<div id="conteudoGeral">
+			<div id="topo">
+				<h1>Estatísticas do Histórico Escolar</h1>
+			</div>
+			<div id="addConteudo">
+				<h2>Adicionar disciplina</h2>
+
+				<div id="camposInput">
+					<input type="number" placeholder="Ano / Período" id="ano">
+					<input type="text" placeholder="Código" id="codigo">
+					<input type="number" placeholder="Carga Horária" id="ch">
+					<input type="number" placeholder="Frequência %" id="freq">
+					<input type="number" placeholder="Nota" id="nota">
+				</div>
+
+				<button onclick="salvarDados()" class="botaoSalvar">SALVAR</button>
+			</div>
+
+			<div id="conteudoSalvo">
+				<h2>Disciplinas adicionadas</h2>
+
+				<div id="campoTabela" style="overflow-x: auto;">
+					<table id="tabela" class="conteudo-tabela">
+						<thead>
+							<tr>
+								<td>Ano / Período</td>
+								<td>Código da Disciplina</td>
+								<td>Carga Horária</td>
+								<td>Frequência %</td>
+								<td>Nota</td>
+								</tr>
+							</thead>
+					</table>
+				</div>
+			</div>
+
+			<div id="conteudo-resultados">
+				<div class="resultados">
+					<h3>Disciplinas Aprovadas</h3>
+					<div class="scroll">
+						<span id="aprovadas"></span>
+					</div>
+					<button onclick="dAprovadas()" class="botao-exibir">Exibir</button>
+				</div>
+				<div class="resultados">
+					<h3>Disciplinas Reprovadas</h3>
+					<div class="scroll">
+						<span id="reprovadas"></span>
+					</div>
+					<button onclick="dReprovadas()" class="botao-exibir">Exibir</button>
+				</div>
+				<div class="resultados">
+					<h3>Tempo de Curso</h3>
+					<div class="scroll">
+						<br><br><br>
+						<span id="tempocurso" class="aumentar-fonte"></span>
+					</div>
+					<button onclick="tCurso()" class="botao-exibir">Exibir</button>
+				</div>
+				<div class="resultados">
+					<h3>Carga Horária Total Cursada</h3>
+					<div class="scroll">
+						<br><br><br>
+						<span id="cargah" class="aumentar-fonte"></span>
+					</div>
+					<button onclick="totalCargaH()" class="botao-exibir">Exibir</button>
+				</div>
+				<div class="resultados">
+					<h3>Média Geral Ponderada pela Carga Horária</h3>
+					<div class="scroll">
+						<br><br><br>
+						<span id="mediapch" class="aumentar-fonte"></span>
+					</div>
+					<button onclick="mediapCH()" class="botao-exibir">Exibir</button>
+				</div>
+				<div class="resultados">
+					<h3>Desvio Padrão da Média Geral</h3>
+					<div class="scroll">
+						<br><br><br>
+						<span id="dpmedia" class="aumentar-fonte"></span>
+					</div>
+					<button onclick="dpMedia()" class="botao-exibir">Exibir</button>
+				</div>
+				<div class="resultados">
+					<h3>Média Geral Ponderada Por Departamento</h3>
+					<div class="scroll">
+						<span id="mediapdep"></span>
+					</div>
+					<button onclick="mediapDEP()" class="botao-exibir">Exibir</button>
+				</div>
+			</div>
+			<div id="rodape">Copyright © 2022 | Elias da Costa Rodrigues</div>
+		</div>
+		<script type="text/javascript" src="tarefa2.js"></script>
+	</body>
+</html>
